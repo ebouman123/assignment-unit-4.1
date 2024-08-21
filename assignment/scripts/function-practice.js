@@ -85,9 +85,9 @@ console.log('Test - should return false', find(20, [1, 2, 3, 4]))
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
+
 function isFirstLetter(letter, string) {
-  let stringArray = Array.from(string);
-  if (stringArray[0] === letter){
+  if (string[0] === letter){
     return true;
   }
   else{
@@ -131,9 +131,40 @@ console.log('Test - should return an empty array', allPositive([-1, -2, -3]))
 
 
 
+//Character recognition software often makes mistakes when documents (especially old ones written with a typewriter) are digitized.
+
+// Your task is to correct the errors in the digitized text. You only have to handle the following mistakes:
+
+// A is misinterpreted as 4
+// S is misinterpreted as 5
+// O is misinterpreted as 0
+// I is misinterpreted as 1
+// The test cases contain numbers only by mistake.
 
 
+function keyboardMistakes(str){
+  let correctedString = ""
+  for (let i of str){
+    if (i == 4){
+      correctedString = correctedString + `A`;
+    }
+    else if (i == 5){
+      correctedString = correctedString + `S`;
+    }
+    else if (i == 0){
+      correctedString = correctedString + `O`;
+    }
+    else if (i == 1){
+      correctedString = correctedString + `I`;
+    }
+    else{
+      correctedString = correctedString + i;
+    }
+  }
+  return correctedString;
+}
 
+console.log(keyboardMistakes("MUB45H1R"))
 
 
 // DO NOT MODIFY
