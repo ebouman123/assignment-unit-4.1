@@ -38,14 +38,15 @@ console.log('Test - should multiply all 3 numbers', multiplyThree(3, 5, 10))
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
-  if (number > 0) {
-    return;
+  if (number = 0 || number > 0) {
+    return true;
   }
-  return;
+  return false;
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-
+console.log('Test - should return true', isPositive(10))
+console.log('Test - should return false', isPositive(-10))
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
