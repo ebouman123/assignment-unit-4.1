@@ -26,13 +26,14 @@ function addNumbers(firstNumber, secondNumber) {
   // return firstNumber + secondNumber;
 }
 
-console.log('Test - should return sum of the two numbers', addNumbers(1, 3))
+console.log('Test - should return the sum of the two numbers', addNumbers(1, 3))
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree() {
-
+function multiplyThree(firstNumber, secondNumber, thirdNumber) {
+  return firstNumber * secondNumber * thirdNumber;
 }
 
+console.log('Test - should multiply all 3 numbers', multiplyThree(3, 5, 10))
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
