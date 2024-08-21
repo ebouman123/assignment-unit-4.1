@@ -38,7 +38,7 @@ console.log('Test - should multiply all 3 numbers', multiplyThree(3, 5, 10))
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
-  if (number = 0 || number > 0) {
+  if (number > 0) {
     return true;
   }
   return false;
@@ -46,6 +46,7 @@ function isPositive(number) {
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log('Test - should return true', isPositive(10))
+console.log('Test - should return false', isPositive(0))
 console.log('Test - should return false', isPositive(-10))
 
 // 6. Function to return the _last_ item in an array. If the 
@@ -66,8 +67,18 @@ console.log('Test - should return undefined', getLast([]))
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
-
+  for (let i = 0; i < array.length; i++){
+    if (array[i] === value){
+      return true;
+    }
+  }
+  if (array[array.length] != value){
+    return false;
+  }
 }
+
+console.log('Test - should return true', find(3, [1, 2, 3, 4]))
+console.log('Test - should return false', find(20, [1, 2, 3, 4]))
 
 // ----------------------
 // Stretch Goals
@@ -75,9 +86,18 @@ function find(value, array) {
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  let stringArray = Array.from(string);
+  console.log(stringArray);
+  if (stringArray[0] === letter){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
+console.log('Test - should return true', isFirstLetter('C', 'CAT'))
+console.log('Test - should return false', isFirstLetter('X', 'CAT'))
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(array) {
